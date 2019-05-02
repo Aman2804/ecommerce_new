@@ -1,0 +1,8 @@
+<h3><%= link_to @category.name, admin_category_path(@category) %></h3><br/>
+<%= @items.each do |item| %> 
+  <%= item.name %> 
+  <%= link_to 'Show', admin_category_item_path(@category,item)%> ,
+  <%= link_to 'Delete', admin_category_item_path(@category,item), method: :delete,
+              data:{confirm:  "Are You Sure to delete #{item.name.upcase}"} %><br/> 
+<% end %><br />
+<%= link_to 'Create Item', new_admin_category_item_path(@category) %>

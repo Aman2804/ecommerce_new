@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do 
-    resources :dashboards, :categories
+    resources :dashboards
+    resources :categories do
+      resources :item, controller: '/admin/items'
+    end
   end
   devise_for :users
   root to:"home#index"

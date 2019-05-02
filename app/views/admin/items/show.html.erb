@@ -1,0 +1,2 @@
+<%= @item.name %><%= link_to 'Delete', admin_category_item_path, method: :delete, data:{confirm:  "Are You Sure to delete #{@item.name.upcase}"} %><br />
+	<%= link_to 'Create Item', new_admin_category_item_path(@category) %>

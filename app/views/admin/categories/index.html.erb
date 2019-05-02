@@ -1,0 +1,8 @@
+<% @categories.each do |cate| %>
+	<%= cate.name %>
+	<%=	link_to 'show', admin_category_path(cate) %>,
+	<%= link_to 'Delete', admin_category_path(cate), method: :delete , data: {confirm: 'Are You Sure'} %>,
+	<%= link_to 'Create Item', new_admin_category_item_path(cate) %>,
+	<%= link_to 'Show Items', admin_category_item_index_path(cate) %><br/>
+<% end %>
+<%= link_to 'Create new category', new_admin_category_path %>
