@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
+#carrier wave gem for file uploading
+gem 'carrierwave'
 # devise gem for login/signup
 gem 'devise'
 # bootstrap gemfile for css

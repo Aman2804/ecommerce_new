@@ -1,0 +1,5 @@
+<%= @picture.each do |pic| %>
+	<%= image_tag pic.image_url.to_s %>
+	<%= link_to "Delete",post_picture_path(@imageable,pic), method: :delete, data: {Confirm: "Are You sure"} %>
+	<%= link_to "Show", post_picture_path(@imageable,pic) %>
+<% end %>

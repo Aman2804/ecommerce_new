@@ -1,5 +1,7 @@
 <%= form_for [@category,@category.items.build], url: admin_category_item_index_path(@category) do |item| %>
   <%= item.label :Name %>
   <%= item.text_field :name %>
+  <%= item.label :Image %>
+  <%= item.file_field :image%>
   <%= item.submit 'Create Item' %>
 <% end %>

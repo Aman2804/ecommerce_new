@@ -2,8 +2,13 @@ Rails.application.routes.draw do
   namespace :admin do 
     resources :dashboards
     resources :categories do
-      resources :item, controller: '/admin/items'
+      resources :item, controller: '/admin/items' do
+        resources :pictures
+      end
     end
+  end
+  map.resources :items do |item|
+    item.resources :pictures
   end
   devise_for :users
   root to:"home#index"

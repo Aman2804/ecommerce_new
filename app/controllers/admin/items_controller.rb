@@ -10,6 +10,9 @@ class Admin::ItemsController < ApplicationController
 	def create
 		@category = Category.find(params[:category_id])
 		@item = @category.items.create(item_params)
+		@picture = Picture.new
+		@image = @picture.image(params[:file])
+		byebug
 		redirect_to admin_category_item_index_path
 	end
 	def show

@@ -1,0 +1,5 @@
+<%= form_for [@imageable, @picture] do |image| %>
+	<h3><%= image.label :Image %></h3>
+	<%= image.file_field :image%><br/>
+	<%= image.submit "Add Image" %>
+<% end %>

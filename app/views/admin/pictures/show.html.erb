@@ -1,0 +1,2 @@
+<%= image_tag @picture.image_url.to_s%>
+<%= link_to "Delete",post_picture_path(@imageable,@picture), method: :delete, data: {Confirm: "Are You sure"} %>
